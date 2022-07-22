@@ -2,19 +2,24 @@
 
 int main(){
     int qnt, num, dig;
+
     scanf("%d", &qnt);
 
-    while(dig < 9){
-        dig=(dig - (dig%10))/10;
-    }
-    for(int i=1; i < qnt; i++){
-       for (int j=1; j <=dig/2; j++){
-            if(dig % j ==0){
-                printf("S");
-            }
-            else{
-                printf("N");
-            }
+    for(int i=0; i <= qnt; i++){
+
+        scanf("%d", &num);
+        if( num % i == 0){
+//separando os digitos do numero inteiro
+            while(dig < 9){
+                dig=(dig - (dig%10))/10;
+                
+            }    
+        }
+        if(dig % i == 0){
+                    printf("N\n");
+                }
+        else{
+                printf("S\n");
         }
     }
     return 0;
